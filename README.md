@@ -1,4 +1,4 @@
-# The Wild Oasis 🌍
+# The Wild Oasis
 
 ![The Wild Oasis Thumbnail Image](./src/data/preview/thumbnail-preview.jpg)
 
@@ -59,7 +59,7 @@ The Wild Oasis is a hotel management web application designed to streamline the 
 
 ### Sorting and Filtering
 
-![Sorting and Filtering Cabins View](./src/data/preview/sortingAndFiltering.PNG)
+![Sorting and Filtering Cabins View](./src/data/preview/sortingandfiltering.PNG)
 
 ### Adding Cabin
 
@@ -106,6 +106,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Emirhan Karagöz - [emirhan-karagoz1@hotmail.com](mailto:emirhan-karagoz1@hotmail.com)
 
-Project Link: [GitHub Repository](https://github.com/Wallinera/WorldWide)
+Project Link: [GitHub Repository](https://github.com/Wallinera/The-Wild-Oasis)
 
-Live Site URL: [worldwide.vercell.app](https://world-wide-omega.vercel.app)
+Live Site URL: [wildoasis.vercell.app](https://the-wild-oasis-umber-five.vercel.app)
