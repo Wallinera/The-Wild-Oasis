@@ -11,10 +11,6 @@
 1. [About the Project](#about-the-project)
 2. [Features](#features)
 3. [Screenshots](#screenshots)
-
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-
 4. [Usage](#usage)
 5. [License](#license)
 6. [Contact](#contact)
