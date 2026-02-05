@@ -65,6 +65,7 @@ function BookingDetail() {
         <ButtonGroup>
           {status === "unconfirmed" && (
             <Button
+              size="small"
               variation="primary"
               onClick={() => navigate(`/checkin/${bookingId}`)}
               icon={<HiArrowDownOnSquare />}
@@ -84,12 +85,12 @@ function BookingDetail() {
           )}
 
           <Modal.Open opens={"delete"}>
-            <Button variation="danger" icon={<HiTrash />}>
+            <Button size="small" variation="danger" icon={<HiTrash />}>
               Delete booking
             </Button>
           </Modal.Open>
 
-          <Button variation="secondary" onClick={moveBack}>
+          <Button size="small" variation="secondary" onClick={moveBack}>
             Back
           </Button>
         </ButtonGroup>
