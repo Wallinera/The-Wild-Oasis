@@ -84,6 +84,18 @@ function BookingDetail() {
             </Button>
           )}
 
+          {status === "checked-out" && (
+            <Button
+              size="small"
+              variation="primary"
+              disabled={isCheckingOut}
+              onClick={() => navigate(`/checkout/${bookingId}`)}
+              icon={<HiArrowUpOnSquare />}
+            >
+              View PDF
+            </Button>
+          )}
+
           <Modal.Open opens={"delete"}>
             <Button size="small" variation="danger" icon={<HiTrash />}>
               Delete booking
