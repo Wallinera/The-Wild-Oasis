@@ -67,19 +67,23 @@ The Wild Oasis is a hotel management web application designed to streamline the 
 
 ### Checkin Page
 
-![Edit Cabin](./src/data/preview/checkins.PNG)
+![Checkin](./src/data/preview/checkins.PNG)
 
 ### Creating Users
 
-![Edit Cabin](./src/data/preview/creatingusers.PNG)
+![Create User](./src/data/preview/creatingusers.PNG)
 
 ### Updating Users
 
-![Edit Cabin](./src/data/preview/userupdate.PNG)
+![Update User](./src/data/preview/userupdate.PNG)
 
 ### Hotel Settings Page
 
-![Edit Cabin](./src/data/preview/settings.PNG)
+![Settings](./src/data/preview/settings.PNG)
+
+### Sending PDF Details
+
+![Edit Cabin](./src/data/preview/sendingPDF.PNG)
 
 ---
 
