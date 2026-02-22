@@ -277,8 +277,8 @@ function CreateBookingForm({ onCloseModel }) {
                     message: "Number of guests must be at least 1",
                   },
                   max: {
-                    value: settings?.max_guests_per_booking,
-                    message: `Number of guests must be at most ${settings?.max_guests_per_booking}`,
+                    value: selectedCabin.maxCapacity,
+                    message: `Selected cabin is only suitable up to ${selectedCabin.maxCapacity} guests`,
                   },
                 })}
               />

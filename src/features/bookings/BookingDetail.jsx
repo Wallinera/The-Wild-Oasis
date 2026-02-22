@@ -76,6 +76,8 @@ function BookingDetail() {
 
           {status === "checked-in" && (
             <Button
+              size="small"
+              variation="primary"
               disabled={isCheckingOut}
               onClick={() => checkout(bookingId)}
               icon={<HiArrowUpOnSquare />}

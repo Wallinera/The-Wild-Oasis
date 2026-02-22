@@ -2,16 +2,18 @@ import Row from "../ui/Row";
 import Heading from "../ui/Heading";
 import BasicDocument from "../ui/BasicDocument";
 import { useBooking } from "../features/bookings/useBooking";
-import { generateBookingPDF } from "../ui/pdfGenerator";
+import { sendBookingEmail } from "../services/apiEmail";
 import Spinner from "../ui/Spinner";
 import Empty from "../ui/Empty";
 import ButtonGroup from "../ui/ButtonGroup";
 import Button from "../ui/Button";
 import { useMoveBack } from "../hooks/useMoveBack";
 import toast from "react-hot-toast";
+import { useState } from "react";
 
 function Checkout() {
   const { booking, isLoading } = useBooking();
+  const [isSending, setIsSending] = useState(false);
   const moveBack = useMoveBack();
 
   if (isLoading) return <Spinner />;
@@ -26,8 +28,17 @@ function Checkout() {
       </Row>
     );
 
-  function handleSendPDF() {
-    toast.error("Implement the api first.");
+  async function handleSendEmail() {
+    setIsSending(true);
+    try {
+      await sendBookingEmail(booking);
+      toast.success(`Booking details sent to ${booking.guests.email}`);
+    } catch (error) {
+      toast.error(error.message || "Failed to send email. Please try again.");
+      console.error(error);
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
@@ -46,10 +57,10 @@ function Checkout() {
         <Button
           size="medium"
           variation={"primary"}
-          onClick={handleSendPDF}
-          disabled={isLoading}
+          onClick={handleSendEmail}
+          disabled={isSending}
         >
-          {isLoading ? "Sending..." : `Send PDF to: ${booking.guests.email}`}
+          {isSending ? "Sending..." : `Send to: ${booking.guests.email}`}
         </Button>
       </ButtonGroup>
     </>
